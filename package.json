@@ -1,0 +1,28 @@
+{
+  "name": "freshfruits",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "./node_modules/.bin/rollup -c",
+    "dev": "rollup -c -w",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.2",
+    "express": "^4.17.1",
+    "rollup": "^2.39.1",
+    "rollup-plugin-commonjs": "^7.0.0",
+    "rollup-watch": "^3.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1"
+  },
+  "devDependencies": {
+    "rollup-plugin-postcss": "^0.2.0",
+    "rollup-plugin-scss": "^2.6.1"
+  }
+}
