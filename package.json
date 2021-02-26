@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "./node_modules/.bin/rollup -c",
     "dev": "rollup -c -w",
+    "build": "rollup -c node server.js",
     "start": "node server.js"
   },
   "author": "",
