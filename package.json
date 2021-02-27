@@ -8,7 +8,8 @@
     "compile": "./node_modules/.bin/rollup -c",
     "dev": "rollup -c -w",
     "build": "rollup -c node server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build-app": "rollup -c netlify-lambda build express"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +24,9 @@
     "sass-loader": "^11.0.1"
   },
   "devDependencies": {
+    "netlify-lambda": "^2.0.3",
     "rollup-plugin-postcss": "^0.2.0",
-    "rollup-plugin-scss": "^2.6.1"
+    "rollup-plugin-scss": "^2.6.1",
+    "serverless-http": "^2.7.0"
   }
 }
