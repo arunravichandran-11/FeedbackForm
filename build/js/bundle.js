@@ -315,7 +315,7 @@ function submitFeedback() {
 
 
   if(Object.keys(selectedAnswers).length > 0) {
-    let submitFeedbackPromise = fetch("/answers", {  
+    let submitFeedbackPromise = fetch("/.netlify/functions/server/answers", {  
       method: "POST",
       headers: { 
         "Content-type": "application/json; charset=UTF-8"
@@ -418,10 +418,11 @@ const FormBuilderComponent = {
     setPage: setFormActive
 };
 
-let promise = window.fetch('/questions');
+let promise = window.fetch('/.netlify/functions/server/questions');
 promise.then(response => response.json())
       .then(data => {
-        prepareQuestionnaire(data);
+        console.log('data', data);
+        prepareQuestionnaire(data.questions);
       });
 
 window.activeFormId = JSON.parse(sessionStorage.getItem('activeFormId')) || 0;
