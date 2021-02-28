@@ -82,7 +82,7 @@ router.post('/answers', (req, res) => {
    res.status(200).send({success: true});
 });
 
-app.use(express.static(__dirname));
+app.use(express.static(__dirname, 'build'));
 app.use('/.netlify/functions/server', router);  // path must route to lambda
 app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
