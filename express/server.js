@@ -73,7 +73,7 @@ router.get('/questions', (req, res) => {
    res.status(200).json({ questions: questions });
 });
 
-router.post('/answers', (req, res) => {
+router.get('/answers', (req, res) => {
    if(!req.body.answers) {
      res.status(401).send({
        error: 'question id with answers are missing'
