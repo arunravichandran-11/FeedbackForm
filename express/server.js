@@ -73,7 +73,7 @@ router.get('/questions', (req, res) => {
    res.status(200).json({ questions: questions });
 });
 
-router.get('/answers', (req, res) => { 
+router.post('/answers', (req, res) => { 
    res.status(200).json({success: true});
 });
 
