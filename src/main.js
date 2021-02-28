@@ -5,8 +5,9 @@ let questions;
 let promise = window.fetch('/.netlify/functions/server/questions');
 promise.then(response => response.json())
       .then(data => {
+        console.log('data', data);
         questions = data;
-        prepareQuestionnaire(data);
+        prepareQuestionnaire(data.questions);
       });
 
 window.activeFormId = JSON.parse(sessionStorage.getItem('activeFormId')) || 0;
