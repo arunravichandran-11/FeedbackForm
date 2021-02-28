@@ -8,7 +8,7 @@
     "compile": "./node_modules/.bin/rollup -c",
     "dev": "rollup -c -w",
     "prod": "netlify-lambda build express",
-    "build": "npm run compile && npm run prod",
+    "build": "netlify-lambda build express",
     "start": "node server.js"
   },
   "author": "",
