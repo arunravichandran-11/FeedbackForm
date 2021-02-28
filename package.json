@@ -23,6 +23,7 @@
     "sass-loader": "^11.0.1"
   },
   "devDependencies": {
+    "body-parser": "^1.19.0",
     "rollup-plugin-postcss": "^0.2.0",
     "rollup-plugin-scss": "^2.6.1"
   }

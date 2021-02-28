@@ -1,3 +1,9 @@
+/**
+* @Params type: {String} iconName - A helper method to create symbols similar to icon using css. As of now 2 icons are created.
+* More icons to be added.
+* @return type { Node } arrowNode - Returns the left and right pointer long arrow icon[created with css].
+*/
+
 function createIcon(iconName) {
 
     if(iconName == 'left-arrow') {
