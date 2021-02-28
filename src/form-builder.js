@@ -138,7 +138,7 @@ function submitFeedback() {
 
   if(Object.keys(selectedAnswers).length > 0) {
     let submitFeedbackPromise = fetch("/.netlify/functions/server/answers", {  
-      method: "GET",
+      method: "POST",
       headers: { 
         "Content-type": "application/json; charset=UTF-8"
       },

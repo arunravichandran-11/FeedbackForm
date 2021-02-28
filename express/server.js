@@ -73,14 +73,16 @@ router.get('/questions', (req, res) => {
    res.status(200).json({ questions: questions });
 });
 
-router.get('/answers', (req, res) => {
-   if(!req.body.answers) {
-     res.status(401).send({
-       error: 'question id with answers are missing'
-     })
-   }
-   res.status(200).send({success: true});
-});
+router.post('/answers', (req, res) => res.json({ postBody: req.body }));
+
+// router.get('/answers', (req, res) => {
+//    if(!req.body.answers) {
+//      res.status(401).send({
+//        error: 'question id with answers are missing'
+//      })
+//    }
+//    res.status(200).send({success: true});
+// });
 
 // app.use(express.static(__dirname, 'build'));
 
