@@ -3,7 +3,7 @@ import FormBuilderComponent from './form-builder';
 
 let questions;
 
-let promise = window.fetch('/questions')
+let promise = window.fetch('/.netlify/functions/server/questions')
 promise.then(response => response.json())
       .then(data => {
         questions = data;
