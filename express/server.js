@@ -70,9 +70,12 @@ router.get('/', (req, res) => {
 });
 
 router.get('/questions', (req, res) => {
-  res.status(200).json({ questions: questions });
+   res.status(200).json({ questions: questions });
 });
 
+router.post('/', (req, res) => { 
+   res.status(200).json({success: true});
+});
 
 // app.use(express.static(__dirname, 'build'));
 
