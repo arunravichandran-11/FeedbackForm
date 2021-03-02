@@ -63,6 +63,8 @@ const questions = [
 
 app.use(bodyParser.json());
 
+app.use(express.static('.'));
+
 const router = express.Router();
 
 router.get('/', (req, res) => {

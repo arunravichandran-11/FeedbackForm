@@ -1,9 +1,21 @@
 // @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
 
-$iconColor: #ddd;
+$iconColor: #8AB9F6;
+$leftIconColor: #1672EC;
 $question_font_size: 14px;
-$header-title: 28px;
+$header-title: 48px;
 $button-font: 16px;
+$form_width_desktop: 1048px;
+$form_height_desktop: 575px;
+$font-family: 'IBM Plex Sans', sans-serif;
+
+:root {
+  --radio-button-color: #0F56B3;
+  --borderWidth: 5px;
+  --height: 41px;
+  --width: 21px;
+  --borderColor: #1F8B24;
+}
 
 * {
   margin: 0;
@@ -13,10 +25,13 @@ $button-font: 16px;
 
 html, body {
   height: 100%;
+
+  * {
+     font-family: $font-family;
+  }
 }
 body {
   background: #f5f6f7;
-  font-family: "Nunito", sans-serif;
   background-image: url('../../images/fruits3.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -51,25 +66,32 @@ main {
   border-radius: 7px;
   width: max-content;
   margin: 4px 0px;
-  margin: 8px 16px;
+  margin: 8px 35px;
+  background: rgba(251, 229, 201, 0.5);
+  box-shadow: inset 0px 1px 2px rgba(97, 97, 97, 0.2), inset 0px 2px 4px rgba(97, 97, 97, 0.2);
+  border-radius: 14px;
 }
 
 .chip-container .selection {
   padding: 12px 12px;
-
-  span {
-    font-size: 18px;
-  }
 }
 
-.chip-container .selection label {
+.chip-container .selection {
   display: inline-block;
   border-radius: 10px;
   color: #ffffff;
   cursor: pointer;
 
   span {
-    font-size: 12px;
+    height: 24px;
+    // font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.0168em;
+    color: #BF710F;
+    padding: 8px;
   }
 }
 
@@ -82,43 +104,134 @@ main {
 }
 
 .text-area {
-  margin: 4px 24px;
+  margin: 4px 35px;
   font-size: 18px;
-  width: 80%;
-  height: 92px;
+  width: 80%; 
+  height: 130px;
+  background: #FFFFFF;
+  border: 0.2px solid #9E9E9E;
+  box-shadow: inset 3px 2px 4px rgba(0, 0, 0, 0.08);
+  // font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  color: #000000;
+  padding: 8px
 }
 
+.check-container {
+  border: 2px solid #C0C0C0;
+  box-sizing: border-box;
+  border-radius: 50px;
+  width: 120px;
+  height: 120px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.check-icon {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: var(--height);
+  width: var(--width);
+  border-bottom: var(--borderWidth) solid var(--borderColor);
+  border-right: var(--borderWidth) solid var(--borderColor);
+}
+
+.check-container + h2 {
+  // font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 130%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #414141;
+  margin: 8px 0px;
+}
+
+.check-container ~ p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 138%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.0075em;
+  color: #818181;
+  margin: 8px 0px;
+}
 
 .chip-container .selection input[type=radio] {
   display: none;
+
+  span {
+    color: #000000;
+    font-size: 16px;
+    height: 24px;
+    color: #BF710F;
+  }
 }
 
 .chip-container .selection input[type=radio]:checked ~ span {
   background-color: #fff;
-  padding: 2px;
   border-radius: 3px;
-  box-shadow: 1px 1px 2px #6d6767;;
+  box-shadow: 1px 1px 2px #6d6767;
+  height: 32px;
+  background: #FFFFFF;
+  color: #000000;
+  box-shadow: 0px 1px 2px rgba(191, 113, 15, 0.2), 0px 2px 4px rgba(191, 113, 15, 0.2);
+  border-radius: 12px;
 }
 
 .form {
   text-align: left;
   position: absolute;
-  width: 50%;
-  background-color: #fff;
+  // width: 50%;
+  width: $form_width_desktop;
+  height: $form_height_desktop;
+  // background-color: #fff;
+  background-color: #f2f8ff;
   display: none;
   border-radius: 4px;
   overflow: hidden;
-  padding: 24px;
-  height: 80%;
+  padding: 32px 64px;
   flex-direction: column;
 }
 
 
 form#index-form {
   text-align: center;
+
+  .form-content-container {
+    h2 {
+      // font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 133%;
+      letter-spacing: -0.01em;
+      color: #000000;
+    }
+    p {
+      // font-family: IBM Plex Sans;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0.005em;
+      color: #000000;
+    }
+  }
 }
 
-.form--header-container {
+.form--content-container {
   line-height: 32px;
   text-align: left;
 }
@@ -130,7 +243,7 @@ form#index-form {
   box-sizing: border-box;
   width: 100%;
   left: 0;
-  padding: 0px 24px;
+  padding: 0px 64px;
 
   button.prev-btn {
     float: left;
@@ -141,19 +254,108 @@ form#index-form {
   }
 }
 
-label {
-  span {
-    font-size: 18px;
-  }
+.radio-button {
+  z-index: 0;
+  position: relative;
+  color: rgba(var(--radio-button-color, 0, 0, 0), 0.87);
+  // font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 24px 35px;
 }
 
-label.radio-button {
-  margin: 12px 16px;
-
-  span {
-    padding: 0px 12px;
-  }
+/* Input */
+.radio-button > input {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  z-index: -1;
+  position: absolute;
+  left: -10px;
+  top: -8px;
+  display: block;
+  margin: 0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(var(--radio-button-color, 0, 0, 0), 0.6);
+  outline: none;
+  opacity: 0;
+  transform: scale(1);
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
 }
+
+.radio-button > span {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Circle */
+.radio-button > span::before {
+  content: "";
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 2px 10px 2px 0;
+  border: solid 2px; /* Safari */
+  border-color: rgba(var(--radio-button-color, 0, 0, 0), 0.6);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+  transition: border-color 0.2s;
+}
+
+.radio-button > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 1);
+  transform: translate(5px, 5px) scale(0);
+  transition: transform 0.2s;
+}
+
+.radio-button > input:checked {
+  background-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 1);
+}
+
+.radio-button > input:checked + span::before {
+  border-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 1);
+}
+
+.radio-button > input:checked + span::after {
+  transform: translate(5px, 5px) scale(1);
+}
+
+.radio-button:hover > input {
+  opacity: 0.04;
+}
+
+.radio-button > input:focus {
+  opacity: 0.12;
+}
+
+.radio-button:hover > input:focus {
+  opacity: 0.16;
+}
+
+.radio-button > input:active {
+  opacity: 1;
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.radio-button > input:active + span::before {
+  border-color: rgba(var(--pure-material-primary-rgb, 33, 150, 243), 1);
+}
+
+
 .form-content-container { 
   text-align: left;
 }
@@ -177,8 +379,14 @@ label.radio-button {
 }
 
 .form--header-title {
+  // font-family: IBM Plex Sans;
   font-size: $header-title;
-  font-weight: 600;
+  font-weight: bold;
+  text-align: left;
+  font-style: normal;
+  line-height: 133%;
+  letter-spacing: -0.005em;
+  color: #000000;
 }
 
 .form--header-text {
@@ -189,11 +397,27 @@ label.radio-button {
 .form-content-container p , .question-description{
     margin: 18px 0px;
     font-size: 18px;
+
+    /* Manrope / Subtitle 1 */
+
+    // font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.005em;
+    // font-feature-settings: 'tnum' on, 'lnum' on;
+    color: #000000;
 }
 
 .question-description {
-  margin-top: 20px;
-  font-size: 24px;
+  margin-top: 68px;
+  // font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 130%;
+  color: #000000;
 }
 
 input[type="text"] {
@@ -224,8 +448,8 @@ input[type="text"] {
 }
 
 .point-left {
-  border: solid $iconColor;
-  border-color: $iconColor;
+  border: solid $leftIconColor;
+  border-color: $leftIconColor;
   border-width: 0 2px 2px 0;
   display: inline-block;
   padding: 3px;
@@ -233,6 +457,11 @@ input[type="text"] {
   position: absolute;
   left: 0;
 }
+
+.point-left ~ .line {
+  background-color: $leftIconColor;
+}
+
 .point-right {
   border: solid $iconColor;
   border-color: $iconColor;
@@ -262,15 +491,27 @@ input[type="text"] {
   padding: 10px;
   position: relative;
   display: flex;
+  align-items: center;
   width: auto;
   border-radius: 4px;
   text-transform: capitalize;
   font-weight: 700;
   cursor: pointer;
+  background: #0F56B3;
+  box-shadow: 0px 1px 2px rgba(15, 86, 179, 0.2), 0px 2px 4px rgba(15, 86, 179, 0.2);
+  border-radius: 8px;
+  // margin: 0px 0px;
 
   span, div {
     pointer-events: none;
-    font-size: 14px;
+    // font-family: IBM Plex Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: #C5DCFA;
   }
 }
 
@@ -299,6 +540,11 @@ input[type="text"] {
   background-color: transparent;
   border : 1px solid #ddd;
   color: #0f56b3;
+  background: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  box-sizing: border-box;
+  border-radius: 8px;
+
   span {
     color: #0f56b3;
     font-size: $button-font;
@@ -309,12 +555,6 @@ input[type="text"] {
 .form__btn.solid {
   background: #0f56b3;
   color: #fff;
-  font-weight: normal;
-
-  span {
-    color: #fff;
-    font-size: $button-font;
-  }
 }
 
 .form--message-text {
@@ -383,19 +623,25 @@ input[type="text"] {
   body {
     background-size: cover;
   }
-  .form {
-    width: 60%;
-  }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 979px) {
   .form {
-    width: 70%;
+    width: 85%;
   }
 }
 
 @media screen and (max-width: 640px) {
   .form {
     width: 95%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .form {
+    .question-description {
+      font-size: 24px;
+    }
   }
 }
