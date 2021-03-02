@@ -7,9 +7,10 @@ $header-title: 48px;
 $button-font: 16px;
 $form_width_desktop: 1048px;
 $form_height_desktop: 575px;
+$font-family: 'IBM Plex Sans', sans-serif;
 
 :root {
-  --pure-material-onsurface-rgb: #0F56B3;
+  --radio-button-color: #0F56B3;
   --borderWidth: 5px;
   --height: 41px;
   --width: 21px;
@@ -24,10 +25,13 @@ $form_height_desktop: 575px;
 
 html, body {
   height: 100%;
+
+  * {
+     font-family: $font-family;
+  }
 }
 body {
   background: #f5f6f7;
-  font-family: "Nunito", sans-serif;
   background-image: url('../../images/fruits3.jpg');
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -80,7 +84,7 @@ main {
 
   span {
     height: 24px;
-    font-family: IBM Plex Sans;
+    // font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -107,7 +111,7 @@ main {
   background: #FFFFFF;
   border: 0.2px solid #9E9E9E;
   box-shadow: inset 3px 2px 4px rgba(0, 0, 0, 0.08);
-  font-family: IBM Plex Sans;
+  // font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -138,7 +142,7 @@ main {
 }
 
 .check-container + h2 {
-  font-family: IBM Plex Sans;
+  // font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 34px;
@@ -207,7 +211,7 @@ form#index-form {
 
   .form-content-container {
     h2 {
-      font-family: IBM Plex Sans;
+      // font-family: IBM Plex Sans;
       font-style: normal;
       font-weight: bold;
       font-size: 60px;
@@ -216,7 +220,7 @@ form#index-form {
       color: #000000;
     }
     p {
-      font-family: IBM Plex Sans;
+      // font-family: IBM Plex Sans;
       font-style: normal;
       font-weight: bold;
       font-size: 16px;
@@ -253,8 +257,8 @@ form#index-form {
 .radio-button {
   z-index: 0;
   position: relative;
-  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
-  font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+  color: rgba(var(--radio-button-color, 0, 0, 0), 0.87);
+  // font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
   font-size: 16px;
   line-height: 1.5;
   margin: 24px 35px;
@@ -274,7 +278,7 @@ form#index-form {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  background-color: rgba(var(--radio-button-color, 0, 0, 0), 0.6);
   outline: none;
   opacity: 0;
   transform: scale(1);
@@ -295,7 +299,7 @@ form#index-form {
   box-sizing: border-box;
   margin: 2px 10px 2px 0;
   border: solid 2px; /* Safari */
-  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  border-color: rgba(var(--radio-button-color, 0, 0, 0), 0.6);
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -375,7 +379,7 @@ form#index-form {
 }
 
 .form--header-title {
-  font-family: IBM Plex Sans;
+  // font-family: IBM Plex Sans;
   font-size: $header-title;
   font-weight: bold;
   text-align: left;
@@ -396,7 +400,7 @@ form#index-form {
 
     /* Manrope / Subtitle 1 */
 
-    font-family: IBM Plex Sans;
+    // font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -408,7 +412,7 @@ form#index-form {
 
 .question-description {
   margin-top: 68px;
-  font-family: IBM Plex Sans;
+  // font-family: IBM Plex Sans;
   font-style: normal;
   font-weight: 600;
   font-size: 34px;
@@ -500,7 +504,7 @@ input[type="text"] {
 
   span, div {
     pointer-events: none;
-    font-family: IBM Plex Sans;
+    // font-family: IBM Plex Sans;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -551,12 +555,6 @@ input[type="text"] {
 .form__btn.solid {
   background: #0f56b3;
   color: #fff;
-  // font-weight: normal; 
-
-  span {
-    // color: #fff;
-    // font-size: $button-font;
-  }
 }
 
 .form--message-text {
@@ -625,9 +623,6 @@ input[type="text"] {
   body {
     background-size: cover;
   }
-  // .form {
-  //   width: 60%;
-  // }
 }
 
 @media only screen and (min-width: 641px) and (max-width: 979px) {
