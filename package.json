@@ -8,7 +8,7 @@
     "compile": "./node_modules/.bin/rollup -c",
     "dev": "rollup -c -w",
     "build": "netlify-lambda build express",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,11 +23,11 @@
   },
   "devDependencies": {
     "body-parser": "^1.19.0",
-    "rollup-plugin-postcss": "^0.2.0",
-    "rollup-plugin-scss": "^2.6.1",
     "express": "^4.17.1",
     "netlify-lambda": "^1.6.3",
-    "nodemon": "^1.19.2",
+    "nodemon": "^1.19.4",
+    "rollup-plugin-postcss": "^0.2.0",
+    "rollup-plugin-scss": "^2.6.1",
     "serverless-http": "^2.3.0"
   }
 }
