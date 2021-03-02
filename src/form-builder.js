@@ -200,7 +200,7 @@ function createForms(formItem, array) {
       }
     }
     
-    var b1 = ButtonComponent.createActionButton('Previous', btnAttrs, "left", prevClick);
+    var b1 = ButtonComponent.createActionButton('Back', btnAttrs, "left", prevClick);
     b1.classList.add('outline');
     b1.classList.add('prev-btn');
   
